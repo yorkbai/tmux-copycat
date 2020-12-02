@@ -7,14 +7,12 @@ PANE_CURRENT_PATH="$1"
 source "$CURRENT_DIR/helpers.sh"
 
 git_status_files() {
-	local git_working_dir="$PANE_CURRENT_PATH"
-	local git_dir="$PANE_CURRENT_PATH/.git"
-	echo "$(git --git-dir="$git_dir" --work-tree="$git_working_dir" status --porcelain)"
+	git -C "$PANE_CURRENT_PATH" status -s
 }
 
 formatted_git_status() {
 	local raw_gist_status="$(git_status_files)"
-	echo "$(echo "$raw_gist_status" | cut -c 4-)"
+	echo "$raw_gist_status" | cut -c 4-
 }
 
 exit_if_no_results() {

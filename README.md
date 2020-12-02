@@ -2,9 +2,13 @@
 
 [![Build Status](https://travis-ci.org/tmux-plugins/tmux-copycat.svg?branch=master)](https://travis-ci.org/tmux-plugins/tmux-copycat)
 
+**NOTE: [tmux 3.1 adds support for native regex searches](https://raw.githubusercontent.com/tmux/tmux/3.1/CHANGES).
+This is great news because it means a big part of 'tmux-copycat' is now
+available natively! Use this plugin only if you need its other features.**
+
 This plugin enables:
 
-- regex searches
+- regex searches (native support added in tmux 3.1)
 - search result highlighting
 - predefined searches
 
@@ -35,7 +39,7 @@ Searches are case insensitive.<br/>
 
 - `prefix + ctrl-f` - simple *f*ile search
 - `prefix + ctrl-g` - jumping over *g*it status files (best used after `git status` command)
-- `prefix + alt-h` - jumping over SHA-1 hashes (best used after `git log` command)
+- `prefix + alt-h` - jumping over SHA-1/SHA-256 hashes (best used after `git log` command)
 - `prefix + ctrl-u` - *u*rl search (http, ftp and git urls)
 - `prefix + ctrl-d` - number search (mnemonic d, as digit)
 - `prefix + alt-i` - *i*p address search
